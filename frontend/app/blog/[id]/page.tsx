@@ -131,8 +131,8 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
           <div className="mb-8">
             <div className="flex flex-wrap items-center gap-3 mb-4">
               <Badge variant="secondary" className="bg-gray-700 text-gray-300">
-                {post.category}
-              </Badge>
+              {post.category}
+            </Badge>
               <Badge
                 className={`border-0 text-white ${
                   post.difficulty === "Beginner"
@@ -206,22 +206,22 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                 <ThumbsUp className="w-4 h-4 mr-2" />
                 Like ({post.likes})
               </Button>
-              <Button
-                variant="outline"
-                size="sm"
+                <Button
+                  variant="outline"
+                  size="sm"
                 className="bg-gray-800 border-gray-600 text-gray-300 hover:bg-gray-700 hover:border-purple-500 hover:text-white"
-              >
-                <Share2 className="w-4 h-4 mr-2" />
+                >
+                  <Share2 className="w-4 h-4 mr-2" />
                 Share ({post.shares})
-              </Button>
-              <Button
-                variant="outline"
-                size="sm"
+                </Button>
+                <Button
+                  variant="outline"
+                  size="sm"
                 className="bg-gray-800 border-gray-600 text-gray-300 hover:bg-gray-700 hover:border-purple-500 hover:text-white"
-              >
-                <Bookmark className="w-4 h-4 mr-2" />
+                >
+                  <Bookmark className="w-4 h-4 mr-2" />
                 Save ({post.bookmarks})
-              </Button>
+                </Button>
             </div>
           </div>
         </div>
@@ -311,14 +311,14 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
           <h2 className="text-2xl font-bold text-white mb-8">Related Articles</h2>
           <div className="grid sm:grid-cols-2 gap-6">
             {relatedPosts.map((relatedPost) => (
-              <div
-                key={relatedPost.id}
-                className="relative p-1 rounded-xl bg-gradient-to-r from-purple-500/30 to-blue-500/30"
-              >
-                <Link
-                  href={`/blog/${relatedPost.id}`}
-                  className="block bg-gray-800/90 backdrop-blur-sm p-6 rounded-xl hover:bg-gray-800 transition-all duration-300 group"
+                <div
+                  key={relatedPost.id}
+                  className="relative p-1 rounded-xl bg-gradient-to-r from-purple-500/30 to-blue-500/30"
                 >
+                  <Link
+                    href={`/blog/${relatedPost.id}`}
+                  className="block bg-gray-800/90 backdrop-blur-sm p-6 rounded-xl hover:bg-gray-800 transition-all duration-300 group"
+                  >
                   <div className="flex gap-2 mb-3">
                     <Badge variant="secondary" className="bg-gray-700 text-gray-300">
                       {relatedPost.category}
@@ -336,9 +336,9 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                     </Badge>
                   </div>
                   <h3 className="text-lg font-semibold text-white group-hover:text-purple-300 transition-colors mb-2">
-                    {relatedPost.title}
-                  </h3>
-                  <p className="text-gray-300 text-sm line-clamp-2 mb-4">{relatedPost.excerpt}</p>
+                      {relatedPost.title}
+                    </h3>
+                    <p className="text-gray-300 text-sm line-clamp-2 mb-4">{relatedPost.excerpt}</p>
                   <div className="flex items-center justify-between text-xs text-gray-400">
                     <div className="flex items-center gap-3">
                       <span>{relatedPost.author}</span>
@@ -355,10 +355,10 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                         <span>{relatedPost.rating}</span>
                       </div>
                     </div>
-                  </div>
-                </Link>
-              </div>
-            ))}
+                    </div>
+                  </Link>
+                </div>
+              ))}
           </div>
         </div>
       </section>
